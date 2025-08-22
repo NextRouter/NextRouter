@@ -1,4 +1,3 @@
-/etc/nftables.conf 
 #!/usr/sbin/nft -f
 
 # 既存のルールセットをすべて削除
