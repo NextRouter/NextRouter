@@ -236,11 +236,3 @@ time ./improved/nextrouter.sh --wan0=eth0 --wan1=eth1 --lan0=eth2 --local-ip=192
 ### ログファイル
 - システムログ: `/var/log/nextrouter.log`
 - デバッグログ: `/tmp/nextrouter-debug.log`
-
-## 今後の改善予定
-
-- [ ] Ansible Playbook 対応
-- [ ] Docker コンテナ化
-- [ ] Web UI インターフェース
-- [ ] SNMP 監視対応
-- [ ] クラウド連携機能
