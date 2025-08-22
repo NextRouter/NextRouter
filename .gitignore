@@ -1,0 +1,4 @@
+target
+*rust-app.log*
+Cargo.lock
+localPacletDump/
