@@ -63,7 +63,7 @@ main() {
     success "Network setup finished."
     
     echo "Installing localPacletDump..."
-    curl -sSL https://raw.githubusercontent.com/NextRouter/localPacletDump/refs/heads/main/install.sh | bash
+    curl -sSL https://raw.githubusercontent.com/NextRouter/localPacletDump/main/install.sh| bash
     echo "localPacletDump installation complete."
 
     echo "Installing localPacletDump..."
