@@ -66,6 +66,19 @@ main() {
     curl -sSL https://raw.githubusercontent.com/NextRouter/localPacletDump/refs/heads/main/install.sh | bash
     echo "localPacletDump installation complete."
 
+    echo "Installing localPacletDump..."
+    curl -sSL https://raw.githubusercontent.com/NextRouter/adaptiveRouting/main/install.sh | bash
+    echo "localPacletDump installation complete."
+    
+    echo "Configuring Prometheus..."
+    if [ -f "$SCRIPT_DIR/prometheus.yml" ]; then
+        cp "$SCRIPT_DIR/prometheus.yml" /etc/prometheus/prometheus.yml
+        systemctl restart prometheus
+        success "Prometheus configuration applied."
+    else
+        warning "prometheus.yml not found in $SCRIPT_DIR"
+    fi
+
     success "All setup tasks completed successfully!"
     info "Prometheus is accessible at http://${LAN_IP}:9090"
 }
